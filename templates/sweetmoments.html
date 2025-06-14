@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweet Moments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sweetmoments-container">
+    <h1>💖 Sweet Moments 💖</h1>
+    <div class="card-grid">
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1pTxSaZ0XUiqBb9EmpOXLxt7v6F0xYkgD/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1pa69JLkitl-f9knDIgT080Yh6RqMY_HE/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1peHl2WadouQVOkd0pIGGVqimngaw-QvW/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1py1XUgENqTBMB4iTHEqxv41BJfpj7qcb/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1pwAdkiBCL8PFPU1OEVT4ZCjm4GqMHpyq/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1pux5S8o8oU3hnS7pAeW0keG1HaIf7T2g/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1pnHIZFWdKkCvDef-y0mkNzWX07kFAUeJ/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1plgs-2rENjIll98u5iRt4bO3G8smy9_H/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+        <div class="card">
+            <iframe src="https://drive.google.com/file/d/1p6AXvZYl9DnVivWaRhofXUejm0pXNqFX/preview" width="200" height="150" allow="autoplay"></iframe>
+        </div>
+    </div>
+    <button class="dashboard-btn" onclick="window.location.href='/dashboard'">🏠 Back to Dashboard</button>
+</div>
+
+<script>
+    function togglePlay(video) {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+</script>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .sweetmoments-container {
+        padding: 20px;
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .video {
+        width: 90%; /* Reduce size to 90% of container */
+        max-width: 400px; /* Adjust based on preference */
+        max-height: 150px; /* Adjust based on preference */
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .dashboard-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        background-color: #ff758c;
+        color: white;
+        cursor: pointer;
+    }
+    .dashboard-btn:hover {
+        background-color: #ff3c41;
+    }
+</style>

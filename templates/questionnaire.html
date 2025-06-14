@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link href="{{ url_for('static', path='/css/question.css') }}" rel="stylesheet">
+    <style>
+        body {
+            background: url('/pics_vids/roses.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 15px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress {
+            height: 10px;
+            background: #4caf50;
+            width: 0;
+            transition: width 0.3s;
+        }
+        button.dashboard-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #ff7f50;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button.dashboard-btn:hover {
+            background: #ff6347;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                max-width: 95%;
+            }
+            .dashboard-btn {
+                width: 100%; /* Makes button full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Questionnaire</h2>
+    <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+    </div>
+    <div id="question-container" class="question-container active">
+        <p id="question"></p>
+        <div id="options"></div>
+    </div>
+    <button class="dashboard-btn" onclick="window.location.href='/dashboard'">🏠 Back to Dashboard</button>
+</div>
+
+<script src="{{ url_for('static', path='/js/question.js') }}"></script>
+</body>
+</html>

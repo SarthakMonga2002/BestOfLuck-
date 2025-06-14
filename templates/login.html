@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Birthday App</title>
+    <style>
+        body {
+            background: url('/pics_vids/backgrd.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        .main-container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .side-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .login-container {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff7f50;
+        }
+        
+        .side-card h3 {
+            font-size: 20px;
+            color: #4169E1;
+            margin-bottom: 15px;
+        }
+        
+        .side-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff7f50;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            background: #ff6347;
+        }
+        
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+                width: 95%;
+            }
+            
+            .side-card {
+                display: none; /* Hide side cards on mobile */
+            }
+            
+            .login-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <!-- Left Side Card -->
+    <div class="side-card">
+        <h3>To My Dearest Ishika ❤️</h3>
+        <p>On this special day, I want to remind you how much you mean to me. Every moment with you is a gift I cherish deeply.</p>
+        <p>Thank you for coming into my life, I will always cherish those long hours calls and texts I shared with you. I was genuinely in bliss. YOU are the one I loved the most from any of the people I dated. I know I am not your first kiss or first love but I wish to be your last. I wanted to have something more than a relationshion. An actual future marriage with you kyuki that's how special you are for me</p>
+        <p>I hope it brings a smile to your beautiful face!</p>
+    </div>
+    
+    <!-- Main Login Container -->
+    <div class="login-container">
+        <h2>🎂 Happy Birthday ISHIKA, My LOVE ❤️</h2>
+        <form action="/auth/login" method="post">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <p class="error" th:text="${error}"></p>
+        </form>
+    </div>
+    
+    <!-- Right Side Card -->
+    <div class="side-card">
+        <h3>Special Message 💌</h3>
+        <p>You light up my world like nobody else. Your smile is my favorite sight, your laugh my favorite sound.</p>
+        <p>On your birthday, I promise to keep making you happy, to support your dreams, and to love you more each day.</p>
+        <p>You are the only one for whom I made an app and i enjoyed each moment of making it. If I knew you would block me, even then I would have made the same efforts. I am sorry I didn't realise when I started annoying you from making you blush . For me smile more laugh more, you are just too good natured and beautiful and cute . Some Love Stories Don't have a good ending but I will never forget you, my Baby Girl, My LOVE Just don't forget me 🥺🥺. I REALLY LOVE YOU 😘😘</p>
+        <p>You're my everything.</p>
+    </div>
+</div>
+</body>
+</html>

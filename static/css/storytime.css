@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #41E1B9, #E14169);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Navigation buttons */
+.navigation {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff758c;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3c41;
+}
+
+/* Move "Next" Button Slightly Left */
+#nextBtn {
+    margin-right: 50px;
+}
+
+/* Adjust card deck position (raise it slightly) */
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 80px auto; /* Moves the deck slightly up */
+    perspective: 1000px;
+}
+
+/* Stacked card effect */
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.6s, top 0.4s ease-in-out, left 0.4s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/* Create the stacking effect */
+/* Create the stacking effect */
+.card:nth-child(1) { top: 0px; left: 0px; }
+.card:nth-child(2) { top: 5px; left: 5px; }
+.card:nth-child(3) { top: 10px; left: 10px; }
+.card:nth-child(4) { top: 15px; left: 15px; }
+.card:nth-child(5) { top: 20px; left: 20px; }
+.card:nth-child(6) { top: 25px; left: 25px; }
+.card:nth-child(7) { top: 30px; left: 30px; }
+.card:nth-child(8) { top: 35px; left: 35px; }
+.card:nth-child(9) { top: 40px; left: 40px; }
+.card:nth-child(10) { top: 45px; left: 45px; }
+.card:nth-child(11) { top: 50px; left: 50px; }
+.card:nth-child(12) { top: 55px; left: 55px; }
+.card:nth-child(13) { top: 60px; left: 60px; }
+.card:nth-child(14) { top: 65px; left: 65px; }
+.card:nth-child(15) { top: 70px; left: 70px; }
+.card:nth-child(16) { top: 75px; left: 75px; }
+.card:nth-child(17) { top: 80px; left: 80px; }
+.card:nth-child(18) { top: 85px; left: 85px; }
+.card:nth-child(19) { top: 90px; left: 90px; }
+
+/* Continue this pattern for all 19 cards */
+
+/* Flip Animation */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.card .front {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    background: #ff758c;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Back to Dashboard Button */
+.dashboard-btn {
+    margin-top: 120px; /* Increase space below deck */
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5e62;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard-btn:hover {
+    background-color: #ff3c41;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 600px) {
+    .card-container {
+        width: 90%;
+        height: auto;
+        margin-top: 60px;
+        position: relative;
+        z-index: 2; /* Ensures it's above the background */
+    }
+
+    .card {
+        width: 280px;
+        height: 360px;
+        font-size: 18px;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-top: 20px; /* Push buttons below the card stack */
+        position: relative;
+        z-index: 2;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 10px; /* Extra spacing */
+    }
+
+    .dashboard-btn {
+        width: 80%;
+        margin-top: 520px; /* Push it further down */
+    }
+}
+
+

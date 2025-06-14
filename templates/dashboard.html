@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Birthday App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: #4169E1; /* Royal Blue */
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: calc(100vh - 40px);
+            width: calc(100vw - 40px);
+            padding: 20px;
+            gap: 15px;
+        }
+        
+        .grid-item {
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .flip-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: rotate(var(--rotate, 0deg));
+        }
+        
+        /* Random rotations */
+        .grid-item:nth-child(1) .flip-card { --rotate: -2deg; }
+        .grid-item:nth-child(2) .flip-card { --rotate: 1deg; }
+        .grid-item:nth-child(3) .flip-card { --rotate: 3deg; }
+        .grid-item:nth-child(4) .flip-card { --rotate: -1deg; }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            border-radius: 10px;
+        }
+        
+        .flip-card-front {
+            background-size: cover;
+            background-position: center;
+            transform: rotateY(0deg);
+            z-index: 2;
+        }
+        
+        .flip-card-back {
+            background: #FF69B4; /* Hot Pink */
+            transform: rotateY(180deg);
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        /* Hover effects */
+        .grid-item:hover .flip-card {
+            transform: rotateY(180deg) rotate(0deg);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="dashboard">
+    <div class="grid-container">
+        <!-- Top Left -->
+        <div class="grid-item">
+            <div class="flip-card" onclick="location.href='/questionnaire';">
+                <div class="flip-card-front" style="background-image: url('/pics_vids/Ishika39.jpeg')">
+                    🎤 Questionnaire
+                </div>
+                <div class="flip-card-back">
+                    <p>Answer fun questions about the birthday star!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Right -->
+        <div class="grid-item">
+            <div class="flip-card" onclick="location.href='/storytime';">
+                <div class="flip-card-front" style="background-image: url('/pics_vids/Ishika40.jpeg')">
+                    📖 Story Time
+                </div>
+                <div class="flip-card-back">
+                    <p>Read heartfelt stories and memories.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Left -->
+        <div class="grid-item">
+            <div class="flip-card" onclick="location.href='/sweetmoments';">
+                <div class="flip-card-front" style="background-image: url('/pics_vids/Ishika45.jpg')">
+                    💖 Sweet Moments
+                </div>
+                <div class="flip-card-back">
+                    <p>Revisit the most precious birthday moments.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Right -->
+        <div class="grid-item">
+            <div class="flip-card" onclick="location.href='/piccollage';">
+                <div class="flip-card-front" style="background-image: url('/pics_vids/Ishika46.jpg')">
+                    📸 Pic Collage
+                </div>
+                <div class="flip-card-back">
+                    <p>View a collage of amazing birthday memories.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
