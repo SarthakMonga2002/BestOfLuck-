@@ -23,6 +23,12 @@ def authenticate(username: str, password: str) -> bool:
     return username == "IshikaAgarwal" and password == "SarthakLovesIshika"
 
 # --- Routes ---
+@app.get("/debug-images")
+async def debug_images():
+    import os
+    files = os.listdir("static/pics_vids")
+    return {"files": files}
+
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return RedirectResponse(url="/auth/login", status_code=302)
