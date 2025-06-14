@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const questions = [
-        { type: "yesno", question: "Is Ishika 19 years old?", correct: "yes" },
+        { type: "yesno", question: "Will Sarthak Always Love Ishika?", correct: "yes" },
         { type: "yesno", question: "Ishika's Birthday is on 12th March?", correct: "yes" },
         { type: "yesno", question: "Does Sarthak have an accent?", correct: "no" },
         { type: "yesno", question: "Ishika has 7 siblings ?", correct: "no" },
-        { type: "yesno", question: "Does Sarthak love Ishika?", correct: "yes" },
         { type: "yesno", question: "Is Ishika's youngest sibling's name Shivam?", correct: "yes" },
         { type: "yesno", question: "Does Ishika Agarwal go to the gym?", correct: "yes" },
         { type: "yesno", question: "Kya Sarthak ko Hindi aati hai? 🤔", correct: "yes" },
@@ -16,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { type: "fill", question: "Who is older, Sarthak or Aashna?", correct: "aashna" },
         { type: "fill", question: "Who is cuter, Ishika or Sarthak?", correct: "ishika" },
         { type: "mcq", question: "What is the age difference between Sarthak and Ishika?", options: ["4", "3", "5", "2"], correct: "4" },
+        { type: "mcq", question: "will Sarthak ever hate Ishika?", options: ["No", "Never", "No and never, Sarthak can only love her"], correct: "No and never, Sarthak can only love her" },
         { type: "mcq", question: "Who is Ishika's boyfriend?", options: ["sarthak", "pratistha"], correct: "sarthak" },
         { type: "mcq", question: "Who is Ishika's favourite cricket player?", options: ["virat", "rohit", "shami"], correct: "virat" },
         { type: "mcq", question: "How cute is Ishika?", options: ["cute", "very cute", "mine", "everything"], correct: "everything" }

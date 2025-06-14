@@ -4,6 +4,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import os
 
+try:
+    import jinja2
+except ImportError:
+    raise ImportError("Jinja2 is required. Install with: pip install jinja2")
+
 app = FastAPI()
 
 # Vercel-optimized static files setup
