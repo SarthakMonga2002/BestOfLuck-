@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 
 # Add this ABOVE your existing static mount
-app.mount("/pics_vids", StaticFiles(directory="static/pics_vids"), name="pics_vids")  # <-- Note: directory="static/pics_vids"
+app.mount("/static/pics_vids", StaticFiles(directory="static/static/pics_vids"), name="pics_vids")  # <-- Note: directory="static/static/pics_vids"
 
 # Keep your existing static mount for CSS/JS
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -64,3 +64,7 @@ async def questionnaire(request: Request):
 @app.get("/piccollage", response_class=HTMLResponse)
 async def piccollage(request: Request):
     return templates.TemplateResponse("piccollage.html", {"request": request})
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
