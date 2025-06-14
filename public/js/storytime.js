@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // List of image paths (assuming they're served statically)
     const imagePaths = [
-        "/static/pics_vids/Ishika20.jpeg", "/static/pics_vids/Ishika2.jpeg", "/static/pics_vids/Ishika.jpeg",
-        "/static/pics_vids/Ishika23.jpeg", "/static/pics_vids/Ishika5.jpeg", "/static/pics_vids/Ishika6.jpeg",
-        "/static/pics_vids/Ishika7.jpeg", "/static/pics_vids/Ishika25.jpeg", "/static/pics_vids/Ishika26.jpeg",
-        "/static/pics_vids/Ishika10.jpeg", "/static/pics_vids/Ishika11.jpeg", "/static/pics_vids/Ishika28.jpeg",
-        "/static/pics_vids/Ishika29.jpeg", "/static/pics_vids/Ishika14.jpeg", "/static/pics_vids/Ishika30.jpeg",
-        "/static/pics_vids/Ishika16.jpeg", "/static/pics_vids/Ishika31.jpeg", "/static/pics_vids/Ishika26.jpeg",
-        "/static/pics_vids/Ishika38.jpeg",
+        "/pics_vids/Ishika20.jpeg", "/pics_vids/Ishika2.jpeg", "/pics_vids/Ishika.jpeg",
+        "/pics_vids/Ishika23.jpeg", "/pics_vids/Ishika5.jpeg", "/pics_vids/Ishika6.jpeg",
+        "/pics_vids/Ishika7.jpeg", "/pics_vids/Ishika25.jpeg", "/pics_vids/Ishika26.jpeg",
+        "/pics_vids/Ishika10.jpeg", "/pics_vids/Ishika11.jpeg", "/pics_vids/Ishika28.jpeg",
+        "/pics_vids/Ishika29.jpeg", "/pics_vids/Ishika14.jpeg", "/pics_vids/Ishika30.jpeg",
+        "/pics_vids/Ishika16.jpeg", "/pics_vids/Ishika31.jpeg", "/pics_vids/Ishika26.jpeg",
+        "/pics_vids/Ishika38.jpeg",
     ];
 
     // Hardcoded text for each card

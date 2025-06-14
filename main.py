@@ -12,7 +12,6 @@ except ImportError:
 app = FastAPI()
 
 # Vercel-optimized static files setup
-app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # Vercel requires this handler

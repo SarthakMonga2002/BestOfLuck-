@@ -5,17 +5,15 @@
       "src": "main.py",
       "use": "@vercel/python",
       "config": {
-        "includeFiles": ["static/**", "templates/**"]
+        "runtime": "python3.9",
+        "includeFiles": ["templates/**", "public/**"]
       }
     }
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "static/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=0"
-      }
+      "src": "/pics_vids/(.*)",
+      "dest": "/public/pics_vids/$1"
     },
     {
       "src": "/(.*)",
