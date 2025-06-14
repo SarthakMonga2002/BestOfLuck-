@@ -16,7 +16,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 # Vercel requires this handler
-handler = app
+app = app
 
 # --- Auth Service ---
 def authenticate(username: str, password: str) -> bool:
